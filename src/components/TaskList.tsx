@@ -34,12 +34,12 @@ export function TaskList() {
       return task.id == id;
     });
 
-    const newTaskList = tasks.filter((task) => {
+    const newTaskListCompletion = tasks.filter((task) => {
       return task.id != id;
     });
 
     setTasks([
-      ...newTaskList,
+      ...newTaskListCompletion,
       {
         id: toggleTask?.id || 0,
         title: toggleTask?.title || "A",
